@@ -1,0 +1,30 @@
+# prio configuration for Bitcoin Core. Read by the prio engine
+# (https://github.com/ryanofsky/prio); see its README for the schema.
+
+[project]
+name = "Bitcoin Core"
+site_title = "prio: Bitcoin Core review map"
+# GitHub organizations whose members may submit feedback through the site.
+orgs = ["bitcoin", "bitcoin-core"]
+
+[[repos]]
+owner = "bitcoin"
+repo = "bitcoin"
+
+[bots]
+# Accounts treated as bots even though GitHub reports them as users.
+logins = ["DrahtBot"]
+# Engine adapters that parse bot output into structured facts.
+adapters = ["drahtbot"]
+
+[size]
+# Size buckets by added+deleted lines: S <= small, M <= medium, L <= large, else XL.
+small = 100
+medium = 400
+large = 1000
+
+[reviewability]
+# A reviewer request left unanswered this long makes the PR "Paused".
+waiting_on_author_days = 7
+# No author activity for this long is a "Stale" signal on its own.
+stale_author_silent_days = 60
