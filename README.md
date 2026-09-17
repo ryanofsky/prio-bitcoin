@@ -1,18 +1,25 @@
 # prio-bitcoin
 
-Categories, definitions of importance, and human feedback for the Bitcoin
-Core instance of [prio](https://github.com/ryanofsky/prio), a
-category-scoped map of which open PRs are worth review time.
+Categories and human feedback for **Bitcoin Core PRs by Category**
+(https://prio.ofsky.org), a site that lists open Bitcoin Core pull
+requests by category and ranks them within each category by how much
+the problem they address matters, so that a PR that is a priority in its
+area is not overlooked because it is quiet, large, or old. The engine
+that builds the site is [prio](https://github.com/ryanofsky/prio).
 
 This repo is about the *contents* of the site: which categories exist,
-what each considers important, and corrections to the machine's
-judgments. Discussion about how the site works belongs in the engine
-repo.
+what each covers and considers important, who edits it, and corrections
+to the model's judgments. Discussion about how the site works belongs in
+the engine repo.
 
-The site is a personal, opinionated tool. Its rankings are model output
-against the files here, labeled as such, with the rationale and inputs
-exposed. It is not a Bitcoin Core project process and does not claim to
-be.
+The site is an unofficial tool and does not speak for the Bitcoin Core
+project. Its rankings are model output against the files here, labeled
+as such, with the reasoning and inputs exposed.
+
+Feedback of any kind, requests for help, and discussion are welcome:
+open an issue here about the information shown on category pages, or in
+the engine repo about the site itself. To volunteer as editor of a
+category or add a new one, open a pull request.
 
 ## Layout
 
