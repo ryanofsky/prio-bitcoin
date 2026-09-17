@@ -5,7 +5,7 @@
 name = "Bitcoin Core"
 # Where these category files live; the site links here and invites pull requests.
 repo_url = "https://github.com/ryanofsky/prio-bitcoin"
-site_title = "prio: Bitcoin Core review map"
+site_title = "Bitcoin Core PR Categories"
 # GitHub organizations whose members may submit feedback through the site.
 orgs = ["bitcoin", "bitcoin-core"]
 
