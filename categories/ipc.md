@@ -1,24 +1,30 @@
 ---
 title: IPC / multiprocess
 owner: ryanofsky
-labels: ["IPC", "Mining"]
+labels: ["IPC"]
 paths: ["src/ipc", "src/interfaces", "src/init/bitcoin-node", "src/init/bitcoin-gui", "src/init/bitcoin-wallet", "src/bitcoin.cpp", "src/ipc/libmultiprocess", "test/functional/interface_ipc"]
-keywords: ["ipc", "multiprocess", "capnp", "capnproto", "libmultiprocess", "bitcoin-node", "bitcoin-gui", "bitcoin-wallet", "-ipcbind", "-ipcconnect", "interfaces::", "mining interface", "stratum"]
+keywords: ["ipc", "multiprocess", "capnp", "capnproto", "libmultiprocess", "bitcoin-node", "bitcoin-gui", "bitcoin-wallet", "-ipcbind", "-ipcconnect", "interfaces::"]
 ---
 
 ## Covers
 
 The process-separation project and everything that serves it: the
 `interfaces::` abstraction layer between node, wallet, and GUI, the Cap'n
-Proto interface definitions, the libmultiprocess subtree, the
-`bitcoin-node` / `bitcoin-gui` / `bitcoin-wallet` executables and the
-`bitcoin` wrapper, the IPC mining interface used by external block
-template consumers, and the tests and build glue for all of it.
+Proto interface definitions and generated-code machinery, the
+libmultiprocess subtree, the `bitcoin-node` / `bitcoin-gui` /
+`bitcoin-wallet` executables and the `bitcoin` wrapper, IPC process
+management (spawning, connecting, disconnect handling), and the tests and
+build glue for all of it. The IPC label is a strong prior.
 
-Borderline: a wallet or GUI PR that changes an `interfaces::` method or a
-`.capnp` file is also ipc, usually low in this category unless the
-interface change is the point. A mining PR that changes what the IPC
-mining interface exposes is ipc.
+Not ipc: PRs whose subject is what the mining interface exposes or how
+templates are built (category `mining`), even though they travel over
+IPC. A mining PR is ipc only if it changes IPC infrastructure itself
+(serialization, connection handling, the capnp toolchain). Likewise a
+wallet or GUI PR that adds a method to `interfaces::Wallet` is wallet
+first; it is ipc only if the interface mechanics are the point.
+
+A general-utility PR (a result type, a logging helper) that the
+multiprocess stack happens to be based on is not ipc.
 
 ## What matters here
 
