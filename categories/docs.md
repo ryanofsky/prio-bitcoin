@@ -2,7 +2,7 @@
 title: Documentation
 owner: ryanofsky
 labels: ["Docs"]
-paths: ["doc/", "README.md", "CONTRIBUTING.md", "src/rpc/", "doc/release-notes", "doc/policy", "doc/design"]
+paths: ["doc/", "README.md", "CONTRIBUTING.md", "doc/release-notes", "doc/policy", "doc/design"]
 keywords: ["doc", "documentation", "release notes", "README", "typo", "comment", "design doc", "developer notes", "help text"]
 ---
 
