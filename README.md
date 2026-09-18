@@ -59,6 +59,13 @@ PR; membership itself is the model's call against the "Covers" text.
 Membership is inclusive: a PR belongs to every category whose area it
 touches, and may be important in one and marginal in another.
 
+`categories/uncategorized.md` is different: `kind: computed` with a
+`not_in` list means the site lists every assessed PR that the model put
+in none of the named categories, with no model call and no ranking. It
+is a check on the definitions. When you add a permanent category, add
+its name to that list; a temporary or personal category left off the
+list does not shrink it.
+
 ## Giving feedback
 
 Open a pull request adding a file under `feedback/`, or (once the site
